@@ -24,7 +24,8 @@ Checking register(0x42) with CS=GPIO26 => Nothing!
 Checking register(0x10) with CS=GPIO26 => Nothing!
 
 
+
 ** STEP 2 **
 Install on the lora pkt forwarder
-git clone https://github.com/hallard/LoRasPI
+https://github.com/hallard/single_chan_pkt_fwd
 
