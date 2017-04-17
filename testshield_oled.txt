@@ -1,0 +1,30 @@
+install I2C OLE RPI DRIVERS
+
+sudo apt-get install build-essential git-core libi2c-dev i2c-tools lm-sensors
+
+Reboot and verify the i2c and SPI stuff is ok in /dev
+
+pi@raspberrypi:/dev $ ls /dev/i2c*
+/dev/i2c-1
+pi@raspberrypi:/dev $ ls /dev/spi*
+/dev/spidev0.0  /dev/spidev0.1
+
+Installation of the generic Driver
+git clone https://github.com/hallard/ArduiPi_OLED
+
+The build install process is in the Makefile, so issue a:
+cd ArduiPi_OLED
+sudo make
+
+
+Go to the examples folder and issue a :
+sudo make
+
+Send command line
+
+sudo ./oled_demo --verbose --oled 3
+oled_demo v1.1
+-- OLED params --
+Oled is    : Adafruit I2C 128x64
+
+
