@@ -1,0 +1,67 @@
+#!/bin/bash
+
+echo "(c)2017 www.electronictricks.com"
+echo "Led test of RPI Zero Lora Shield"
+
+# We set the pin 11 (GPIO 17) for LED operation
+echo "Setup of PIN11/GPIO17 for OUT mode"
+gpio mode 0 out
+
+# We switch the LED on by sending +3.3v
+echo "Switching the LED ON"
+gpio write 0 1
+
+# Wait 3 sec until we switch off
+sleep 1s
+
+# We switch the LED OFF
+echo "Switching the LED on PIN11/GPIO17 off\n"
+gpio write 0 0
+
+
+# We set the pin 7 (GPIO 4) for LED operation
+echo "Setup of PIN12/GPIO18 for OUT mode"
+gpio mode 1 out
+
+# We switch the LED on by sending +3.3v
+echo "Switching the LED ON"
+gpio write 1 1
+
+# Wait 3 sec until we switch off
+sleep 1s
+
+# We switch the LED OFF
+echo "Switching the LED on PIN12/GPIO18 off\n"
+gpio write 1 0
+
+
+# We set the pin 7 (GPIO 4) for LED operation
+echo "Setup of PIN35/GPI019 for OUT mode"
+gpio mode 24 out
+
+# We switch the LED on by sending +3.3v
+echo "Switching the LED ON"
+gpio write 24 1
+
+# Wait 3 sec until we switch off
+sleep 3s
+
+# We switch the LED OFF
+echo "Switching the LED on PIN35/GPIO19 off\n"
+gpio write 24 0
+
+# We set the pin 7 (GPIO 4) for LED operation
+echo "Setup of PIN7/GPIO4 for OUT mode"
+gpio mode 7 out
+
+# We switch the LED on by sending +3.3v
+echo "Switching the LED ON"
+gpio write 7 1
+
+# Wait 3 sec until we switch off
+sleep 3s
+
+# We switch the LED OFF
+echo "Switching the LED on PIN7/GPIO4 off\n"
+gpio write 7 0
+
