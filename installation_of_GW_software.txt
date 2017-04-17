@@ -29,3 +29,14 @@ Checking register(0x10) with CS=GPIO26 => Nothing!
 Install on the lora pkt forwarder
 https://github.com/hallard/single_chan_pkt_fwd
 
+Please note we are on a RPI ZERO with no ETH0 card
+
+EDIT: sudo joe single_chan_pkt_fwd.cpp
+Line 691: 
+Change 
+ strncpy(ifr.ifr_name, "eth0", IFNAMSIZ-1);  // can we rely on eth0?
+
+to
+ strncpy(ifr.ifr_name, "wlan0", IFNAMSIZ-1);  // can we rely on eth0?
+
+recompile 
