@@ -1,0 +1,30 @@
+Installation of the PKT Forwarder
+Based on the documentation of https://github.com/hallard/single_chan_pkt_fwd
+
+
+** STEP 1 **
+Install bcm2835 library
+wget http://www.open.com.au/mikem/bcm2835/bcm2835-1.50.tar.gz
+tar xvfz bcm2835-1.50.tar.gz; 
+cd bcm2835-1.50;
+
+./configure; 
+make; 
+sudo make install
+
+Scan the SPI port to find the RFM95
+pi@raspberrypi:~/arduino-lmic/examples/raspi/spi_scan $ sudo ./spi_scan
+Checking register(0x42) with CS=GPIO06 => Nothing!
+Checking register(0x10) with CS=GPIO06 => Nothing!
+Checking register(0x42) with CS=GPIO07 => Nothing!
+Checking register(0x10) with CS=GPIO07 => Nothing!
+Checking register(0x42) with CS=GPIO08 => SX1276 RF95/96 (V=0x12)
+Checking register(0x10) with CS=GPIO08 => Nothing!
+Checking register(0x42) with CS=GPIO26 => Nothing!
+Checking register(0x10) with CS=GPIO26 => Nothing!
+
+
+** STEP 2 **
+Install on the lora pkt forwarder
+git clone https://github.com/hallard/LoRasPI
+
