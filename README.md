@@ -10,4 +10,4 @@ PC board can be purchased from here
 https://www.tindie.com/products/electronictrik/raspberry-pi0w-lora-shield-with-i2c-and-oled/
 
 On version 1.2 , there is a mistake on the PCB. The antenna is grounded by accident.
-You have to cut a segment. See cut.jpg file 
+You have to cut a segment. See cut.jpg file . Version 1.3 and Upper are ok with no need to cut 
